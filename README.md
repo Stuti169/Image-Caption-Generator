@@ -1,2 +1,21 @@
 # Image-Caption-Generator
-This project enhances image caption generators to improve accuracy, speed, and reduce bias. Using larger datasets, powerful models like Transformers and GRUs, and advanced techniques such as attention mechanisms, it aims to create more accurate, efficient, and fair image descriptions.
+import numpy as np
+from PIL import Image
+import os
+import string
+from pickle import dump, load
+from tensorflow.keras.applications.xception import Xception
+from tensorflow.keras.applications.xception import preprocess_input
+from tensorflow.keras.preprocessing import image
+from tensorflow.keras.preprocessing.image import img_to_array
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.utils import to_categorical
+from tensorflow.keras.layers import Add
+from tensorflow.keras.models import Model, load_model
+from tensorflow.keras.layers import Input, Dense, LSTM, Embedding, Dropout
+from tqdm import tqdm
+tqdm().pandas()
+
+
+
